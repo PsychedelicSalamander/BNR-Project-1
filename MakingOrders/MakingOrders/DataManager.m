@@ -73,8 +73,16 @@ NSArray *_items;
 		NSArray *colors = [item valueForKeyPath:@"customizations.color"];
 		NSArray *sizes = [item valueForKeyPath:@"customizations.sizes"];
 
-//		[JJRCatalogItem alloc]
-
+//		JJRCatalogItemCustomization *customizations = [JJRCatalogItemCustomization new];
+//
+//
+//		JJRCatalogItem *catalogItem = [[JJRCatalogItem new];
+//		catalogItem.name = name;
+//		catalogItem.basePrice = basePrice;
+//		catalogItem.imageUrl = image;
+//		catalogItem.customizations = customizations;
+		
+		
 //		"text" : "What a hack",
 //				"logo" : "sheesh",
 //				"color" : ["#000000", "#ff0000", "#00ff00", "#0000ff"],
