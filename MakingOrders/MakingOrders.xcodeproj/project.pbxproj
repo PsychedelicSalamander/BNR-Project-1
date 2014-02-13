@@ -43,6 +43,8 @@
 		A907771818AD3FF60062E9BE /* NSArray+LinqExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A907771518AD3FF60062E9BE /* NSArray+LinqExtensions.m */; };
 		A907771918AD3FF60062E9BE /* NSDictionary+LinqExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A907771718AD3FF60062E9BE /* NSDictionary+LinqExtensions.m */; };
 		A907771D18AD41A50062E9BE /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A907771C18AD41A50062E9BE /* DataManager.m */; };
+		A989C26B18AD874B005689B7 /* JJRCatalogItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A989C26A18AD874B005689B7 /* JJRCatalogItem.m */; };
+		A989C26E18AD87CD005689B7 /* JJRCatalogItemCustomization.m in Sources */ = {isa = PBXBuildFile; fileRef = A989C26D18AD87CD005689B7 /* JJRCatalogItemCustomization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +122,10 @@
 		A907771718AD3FF60062E9BE /* NSDictionary+LinqExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LinqExtensions.m"; sourceTree = "<group>"; };
 		A907771B18AD41A50062E9BE /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		A907771C18AD41A50062E9BE /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		A989C26918AD874B005689B7 /* JJRCatalogItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJRCatalogItem.h; sourceTree = "<group>"; };
+		A989C26A18AD874B005689B7 /* JJRCatalogItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRCatalogItem.m; sourceTree = "<group>"; };
+		A989C26C18AD87CD005689B7 /* JJRCatalogItemCustomization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJRCatalogItemCustomization.h; sourceTree = "<group>"; };
+		A989C26D18AD87CD005689B7 /* JJRCatalogItemCustomization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRCatalogItemCustomization.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +198,10 @@
 				A90776A818AD3EB20062E9BE /* Supporting Files */,
 				A907771B18AD41A50062E9BE /* DataManager.h */,
 				A907771C18AD41A50062E9BE /* DataManager.m */,
+				A989C26918AD874B005689B7 /* JJRCatalogItem.h */,
+				A989C26A18AD874B005689B7 /* JJRCatalogItem.m */,
+				A989C26C18AD87CD005689B7 /* JJRCatalogItemCustomization.h */,
+				A989C26D18AD87CD005689B7 /* JJRCatalogItemCustomization.m */,
 			);
 			path = MakingOrders;
 			sourceTree = "<group>";
@@ -395,12 +405,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A907771018AD3F6A0062E9BE /* UIProgressView+AFNetworking.m in Sources */,
+				A989C26E18AD87CD005689B7 /* JJRCatalogItemCustomization.m in Sources */,
 				A907770E18AD3F6A0062E9BE /* UIButton+AFNetworking.m in Sources */,
 				A907771118AD3F6A0062E9BE /* UIRefreshControl+AFNetworking.m in Sources */,
 				A907770D18AD3F6A0062E9BE /* UIAlertView+AFNetworking.m in Sources */,
 				A90776BE18AD3EB20062E9BE /* SecondViewController.m in Sources */,
 				A907770618AD3F6A0062E9BE /* AFSecurityPolicy.m in Sources */,
 				A90776B218AD3EB20062E9BE /* AppDelegate.m in Sources */,
+				A989C26B18AD874B005689B7 /* JJRCatalogItem.m in Sources */,
 				A907770318AD3F6A0062E9BE /* AFHTTPRequestOperationManager.m in Sources */,
 				A907770718AD3F6A0062E9BE /* AFURLConnectionOperation.m in Sources */,
 				A907771918AD3FF60062E9BE /* NSDictionary+LinqExtensions.m in Sources */,
@@ -636,6 +648,7 @@
 				A90776D818AD3EB20062E9BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A90776D918AD3EB20062E9BE /* Build configuration list for PBXNativeTarget "MakingOrdersTests" */ = {
 			isa = XCConfigurationList;
@@ -644,6 +657,7 @@
 				A90776DB18AD3EB20062E9BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
