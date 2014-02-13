@@ -26,4 +26,14 @@
     return !(self.optionalSizeSelection == nil);
 }
 
+- (id)initWithName:(NSString *)name basePrice:(int)basePrice
+{
+    self = [super init];
+    if (self) {
+        self.name = name;
+        self.basePrice = basePrice;
+    }
+    return self;
+}
+
 @end

@@ -20,4 +20,6 @@
 @property (nonatomic, readonly)BOOL hasOptionalSizeSelection;
 @property (nonatomic, readonly)BOOL hasOptionalColorSelection;
 
+-(instancetype)initWithName:(NSString *)name basePrice:(int)basePrice;
+
 @end
