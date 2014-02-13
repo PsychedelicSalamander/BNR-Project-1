@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		699BBEB118AD874A005D1105 /* JJRCartItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 699BBEB018AD874A005D1105 /* JJRCartItem.m */; };
 		A90776A218AD3EB20062E9BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90776A118AD3EB20062E9BE /* Foundation.framework */; };
 		A90776A418AD3EB20062E9BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90776A318AD3EB20062E9BE /* CoreGraphics.framework */; };
 		A90776A618AD3EB20062E9BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90776A518AD3EB20062E9BE /* UIKit.framework */; };
@@ -56,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		699BBEAF18AD874A005D1105 /* JJRCartItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJRCartItem.h; sourceTree = "<group>"; };
+		699BBEB018AD874A005D1105 /* JJRCartItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRCartItem.m; sourceTree = "<group>"; };
 		A907769E18AD3EB20062E9BE /* MakingOrders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakingOrders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A90776A118AD3EB20062E9BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A90776A318AD3EB20062E9BE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -146,6 +149,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		699BBEAB18AD8601005D1105 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				699BBEAF18AD874A005D1105 /* JJRCartItem.h */,
+				699BBEB018AD874A005D1105 /* JJRCartItem.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		A907769518AD3EB20062E9BE = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +191,7 @@
 		A90776A718AD3EB20062E9BE /* MakingOrders */ = {
 			isa = PBXGroup;
 			children = (
+				699BBEAB18AD8601005D1105 /* Models */,
 				A907771318AD3F710062E9BE /* ThirdParty */,
 				A90776B018AD3EB20062E9BE /* AppDelegate.h */,
 				A90776B118AD3EB20062E9BE /* AppDelegate.m */,
@@ -398,6 +411,7 @@
 				A907770E18AD3F6A0062E9BE /* UIButton+AFNetworking.m in Sources */,
 				A907771118AD3F6A0062E9BE /* UIRefreshControl+AFNetworking.m in Sources */,
 				A907770D18AD3F6A0062E9BE /* UIAlertView+AFNetworking.m in Sources */,
+				699BBEB118AD874A005D1105 /* JJRCartItem.m in Sources */,
 				A90776BE18AD3EB20062E9BE /* SecondViewController.m in Sources */,
 				A907770618AD3F6A0062E9BE /* AFSecurityPolicy.m in Sources */,
 				A90776B218AD3EB20062E9BE /* AppDelegate.m in Sources */,
@@ -636,6 +650,7 @@
 				A90776D818AD3EB20062E9BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A90776D918AD3EB20062E9BE /* Build configuration list for PBXNativeTarget "MakingOrdersTests" */ = {
 			isa = XCConfigurationList;
@@ -644,6 +659,7 @@
 				A90776DB18AD3EB20062E9BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
