@@ -13,7 +13,6 @@
 
 + (void)loadProducts
 {
-    NSURL * url = [NSURL URLWithString:@""];
     
 
 }
