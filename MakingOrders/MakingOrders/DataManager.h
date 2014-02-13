@@ -12,4 +12,5 @@
 
 + (void)loadProducts;
 
++ (void)setItems:(id)items;
 @end

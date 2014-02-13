@@ -8,6 +8,9 @@
 
 #import "DataManager.h"
 #import "AFNetworking/AFNetworking.h"
+#import "JJRCatalogItem.h"
+
+NSArray *_items;
 
 @implementation DataManager
 
@@ -39,7 +42,64 @@
 
 + (void)generateCatalog:(id)responseObject
 {
-    
+
+
+//	{
+//		"name": "T-Shirt",
+//				"basePrice": "15",
+//				"image" : "http://bnr-fruititems.appspot.com/images/tshirt.jpg",
+//				"customizations" : {
+//			"text" : "What a hack",
+//					"logo" : "sheesh",
+//					"color" : ["#000000", "#ff0000", "#00ff00", "#0000ff"],
+//					"sizes" : ["Small", "Medium", "Large", "X-Large", "2X-Large"]
+//		}
+//	},
+
+	_items = responseObject;
+
+
+	for(NSDictionary *item in _items)
+	{
+		NSString *name = [item valueForKeyPath:@"name"];
+		NSString *basePrice = [item valueForKeyPath:@"basePrice"];
+		NSString *image = [item valueForKeyPath:@"image"];
+
+		NSString *text = [item valueForKeyPath:@"customizations.text"];
+		if(text == nil) text = @"";
+
+		NSString *logo = [item valueForKeyPath:@"customizations.logo"];
+
+		NSArray *colors = [item valueForKeyPath:@"customizations.color"];
+		NSArray *sizes = [item valueForKeyPath:@"customizations.sizes"];
+
+//		[JJRCatalogItem alloc]
+
+//		"text" : "What a hack",
+//				"logo" : "sheesh",
+//				"color" : ["#000000", "#ff0000", "#00ff00", "#0000ff"],
+//				"sizes" : ["Small", "Medium", "Large", "X-Large", "2X-Large"]
+
+	}
+
+
+
+
+
+//	cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@", user, desc];
+//	cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@", event[@"type"], event[@"created_at"]];
+//	[cell.imageView setImageWithURL:[NSURL URLWithString:avatarURLStr] placeholderImage:[UIImage imageNamed:@"naruto.jpg"]];
+
+}
+
++ (void)setItems:(id)items
+{
+	_items = items;
+}
+
++ (NSArray *)items
+{
+	return _items;
 }
 
 @end
