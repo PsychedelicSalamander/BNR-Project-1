@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>BF8A3C3A-8E45-47BD-A00F-BE30DFDDA3FA</string>
+	<string>E20AE333-5BDA-45A7-BE48-4FBB11B982EA</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MakingOrders</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>FE4F0F49-75AB-4D51-B656-FB98706D13AD</key>
-		<string>ssh://github.com/PsychedelicSalamander/BNR-Project-1.git</string>
+		<key>1C046239-7D86-487D-BC20-170ED3B623D5</key>
+		<string>https://github.com/PsychedelicSalamander/BNR-Project-1</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>MakingOrders/MakingOrders.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>FE4F0F49-75AB-4D51-B656-FB98706D13AD</key>
+		<key>1C046239-7D86-487D-BC20-170ED3B623D5</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/PsychedelicSalamander/BNR-Project-1.git</string>
+	<string>https://github.com/PsychedelicSalamander/BNR-Project-1</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>FE4F0F49-75AB-4D51-B656-FB98706D13AD</string>
+	<string>1C046239-7D86-487D-BC20-170ED3B623D5</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>FE4F0F49-75AB-4D51-B656-FB98706D13AD</string>
+			<string>1C046239-7D86-487D-BC20-170ED3B623D5</string>
 			<key>IDESourceControlWCCName</key>
 			<string>BNR-Project-1</string>
 		</dict>
