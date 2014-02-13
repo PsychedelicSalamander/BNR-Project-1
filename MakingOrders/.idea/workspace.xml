@@ -5,7 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MakingOrders.xcodeproj/xcuserdata/JBott.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterPath="$PROJECT_DIR$/MakingOrders.xcodeproj/xcuserdata/JBott.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MakingOrders/DataManager.h" afterPath="$PROJECT_DIR$/MakingOrders/DataManager.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MakingOrders/DataManager.m" afterPath="$PROJECT_DIR$/MakingOrders/DataManager.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MakingOrders.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,10 +27,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="DataManager.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MakingOrders/DataManager.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="0" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="752">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DataManager.m" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MakingOrders/DataManager.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="0" selection-start="2312" selection-end="2312" vertical-scroll-proportion="0.6152344" vertical-offset="360" max-vertical-offset="1547">
+            <state line="75" column="0" selection-start="2287" selection-end="2583" vertical-scroll-proportion="0.5371094" vertical-offset="385" max-vertical-offset="1667">
               <folding>
                 <element signature="e#677#680#1" expanded="false" />
                 <element signature="e#698#1087#0" expanded="false" />
@@ -81,6 +89,7 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/MakingOrders/DataManager.h" />
         <option value="$PROJECT_DIR$/MakingOrders/DataManager.m" />
       </list>
     </option>
@@ -231,7 +240,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/MakingOrders/DataManager.m</url>
-          <line>82</line>
+          <line>90</line>
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="1" />
@@ -256,9 +265,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MakingOrders/DataManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="752">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MakingOrders/DataManager.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="0" selection-start="2312" selection-end="2312" vertical-scroll-proportion="0.6152344" vertical-offset="360" max-vertical-offset="1547">
+        <state line="75" column="0" selection-start="2287" selection-end="2583" vertical-scroll-proportion="0.5371094" vertical-offset="385" max-vertical-offset="1667">
           <folding>
             <element signature="e#677#680#1" expanded="false" />
             <element signature="e#698#1087#0" expanded="false" />
