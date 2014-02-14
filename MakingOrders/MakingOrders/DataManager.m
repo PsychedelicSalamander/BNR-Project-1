@@ -24,7 +24,10 @@ NSMutableArray *_cart;
 {
 	_items = @[].mutableCopy;
 	_history = @[].mutableCopy;
-	
+	_cart = @[].mutableCopy;
+
+	[[self class] populateCartWithFakeData];
+
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
     manager.responseSerializer = AFJSONResponseSerializer.serializer;
@@ -37,12 +40,8 @@ NSMutableArray *_cart;
              }];
 
          }
-		 failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-             
-             // get the json here
-             //        id json = error.userInfo[JSONResponseSerializerWithDataKey];
-             //        NSLog(@"failure %@", json);
-         }];
+		 failure:^(AFHTTPRequestOperation *operation, NSError *error) {}
+     ];
     
 
 }
@@ -94,9 +93,8 @@ NSMutableArray *_cart;
 + (void)addCartItem:(JJRCartItem *)cartItem
 {
     [_cart addObject:cartItem];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [NSNotificationCenter.defaultCenter postNotificationName:kJJRNewCartItem object:self userInfo:nil];
-    });
+    [NSNotificationCenter.defaultCenter postNotificationName:kJJRNewCartItem object:self userInfo:nil];
+
 }
 
 + (void)loadHistory
@@ -110,9 +108,13 @@ NSMutableArray *_cart;
              NSString *historyString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
 
 			 [[self class] parseHistory:historyString];
-//			 [NSOperationQueue.mainQueue addOperationWithBlock:^{
-//				 [[self class] loadHistory];
-//			 }];
+			 [NSOperationQueue.mainQueue addOperationWithBlock:^{
+
+                 dispatch_async(dispatch_get_main_queue(), ^{
+                     [NSNotificationCenter.defaultCenter postNotificationName:kJJRHistoryReady object:self userInfo:nil];
+                 });
+                 
+			 }];
 
 		 }
 		 failure:^(AFHTTPRequestOperation *operation, NSError *error) {}
@@ -169,33 +171,13 @@ NSMutableArray *_cart;
 
 + (void)placeOrder
 {
+	NSString *orderUrl = [[self class] buildOrderString];
 
 	AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-
-	
-	
 	manager.responseSerializer = AFJSONResponseSerializer.serializer;
-
-	NSMutableString *totallyUglyAndSuperLongCartDescriptor = @"".mutableCopy;
-
-	for (JJRCartItem *item in _cart)
-	{
-		[totallyUglyAndSuperLongCartDescriptor appendFormat:@"%@", item.orderSummary ?: @""];
-	}
-
-
-	NSString *orderUrl = [NSString stringWithFormat:@"http://bnr-fruititems.appspot.com/order?account=TZ123&items=%@", totallyUglyAndSuperLongCartDescriptor];
-
-	[manager GET:orderUrl parameters:@{}
+	[manager POST:orderUrl parameters:@{}
 		 success:^(AFHTTPRequestOperation *operation, id responseObject) {
-
-//			 [[self class] parseProducts:responseObject];
-//			 [NSOperationQueue.mainQueue addOperationWithBlock:^{
-//				 [[self class] loadHistory];
-//			 }];
-
-			 
-
+			 [DataManager loadHistory];
 		 }
 		 failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 
@@ -203,6 +185,35 @@ NSMutableArray *_cart;
 			 //        id json = error.userInfo[JSONResponseSerializerWithDataKey];
 			 //        NSLog(@"failure %@", json);
 		 }];
+}
+
++ (NSString *)buildOrderString
+{
+	NSMutableString *totallyUglyAndSuperLongCartDescriptor = @"".mutableCopy;
+
+	for (JJRCartItem *item in _cart)
+	{
+		[totallyUglyAndSuperLongCartDescriptor appendFormat:@"__ITEM__%@", item.orderSummary ?: @""];
+	}
+
+	NSString *orderUrl = [NSString stringWithFormat:@"http://bnr-fruititems.appspot.com/order?account=TZ123&items=%@", totallyUglyAndSuperLongCartDescriptor];
+	return orderUrl;
+}
+
+
++ (void)populateCartWithFakeData
+{
+	for(NSInteger i = 0; i < 3; i++)
+	{
+		JJRCartItem *item = [JJRCartItem new];
+		item.name = [NSString stringWithFormat:@"item_%i", i];
+		item.optionalColorSelection = [NSString stringWithFormat:@"color_%i", i];
+		item.optionalLogoSelection = [NSString stringWithFormat:@"logo_%i", i];
+		item.optionalTextSelection = [NSString stringWithFormat:@"text_%i", i];
+		item.optionalSizeSelection = [NSString stringWithFormat:@"size_%i", i];
+
+		[_cart addObject:item];
+	}
 }
 
 

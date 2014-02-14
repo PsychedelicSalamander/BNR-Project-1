@@ -39,7 +39,7 @@
 - (NSString *)orderSummary
 {
 	NSMutableString * _orderSummary = @"".mutableCopy;
-	[_orderSummary appendFormat:@",%@", self.name ?: @""];
+	[_orderSummary appendFormat:@"%@", self.name ?: @""];
 	[_orderSummary appendFormat:@",%@", self.optionalTextSelection ?: @""];
 	[_orderSummary appendFormat:@",%@", self.optionalLogoSelection ?: @""];
 	[_orderSummary appendFormat:@",%@", self.optionalColorSelection ?: @""];
