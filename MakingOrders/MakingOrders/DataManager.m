@@ -10,8 +10,10 @@
 #import "AFNetworking/AFNetworking.h"
 #import "JJRCatalogItem.h"
 #import "JJRCartItem.h"
+#import "JJROrder.h"
 
 NSMutableArray *_items;
+NSMutableArray *_history;
 NSMutableArray *_cart;
 
 
@@ -21,7 +23,8 @@ NSMutableArray *_cart;
 + (void)loadProducts
 {
 	_items = @[].mutableCopy;
-
+	_history = @[].mutableCopy;
+	
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
     manager.responseSerializer = AFJSONResponseSerializer.serializer;
@@ -73,12 +76,17 @@ NSMutableArray *_cart;
 
 }
 
++ (NSMutableArray *)history;
+{
+	return _history;
+}
+
 + (NSArray *)items
 {
 	return _items;
 }
 
-+ (NSArray *)cartItems
++ (NSMutableArray *)cartItems
 {
     return _cart;
 }
@@ -135,19 +143,25 @@ NSMutableArray *_cart;
     
 	for (NSTextCheckingResult* match in matches) {
 
+		JJROrder *order = [JJROrder new];
+
 
 		NSRange groupId = [match rangeAtIndex:1];
-		NSString *orderID = [substring substringWithRange:groupId];
-		NSLog(@"orderID: %@", orderID);
 
 		NSRange groupSummary = [match rangeAtIndex:2];
-		NSString *orderSummary = [substring substringWithRange:groupSummary];
-		NSLog(@"orderSummary: %@", orderSummary);
 
 		NSRange groupKey = [match rangeAtIndex:3];
-		NSString *key = [substring substringWithRange:groupKey];
-		NSLog(@"key: %@", key);
 
+		order.accountNumber = [substring substringWithRange:groupId] ?: @"";
+		order.detail = [substring substringWithRange:groupSummary] ?: @"";
+		order.key = [substring substringWithRange:groupKey] ?: @"";
+
+		NSLog(@"\n~~~~~~~~~~~~~~~~");
+		NSLog(@"orderID: %@", [substring substringWithRange:groupId]);
+		NSLog(@"orderSummary: %@", [substring substringWithRange:groupSummary]);
+		NSLog(@"key: %@", [substring substringWithRange:groupKey]);
+
+		[DataManager.history addObject:order];
 	}
 }
 
