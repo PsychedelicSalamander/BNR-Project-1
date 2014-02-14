@@ -61,7 +61,7 @@
             </objects>
             <point key="canvasLocation" x="921" y="-194"/>
         </scene>
-        <!--Second View Controller - My Cart-->
+        <!--Second View Controller - Cart-->
         <scene sceneID="elf-Rn-sHd">
             <objects>
                 <tableViewController id="apn-sR-LRz" customClass="SecondViewController" sceneMemberID="viewController">
@@ -112,13 +112,41 @@
                         </prototypes>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Cart" image="second" id="LBV-5C-RMr"/>
-                    <navigationItem key="navigationItem" title="My Cart" id="z2S-of-lTw">
-                        <barButtonItem key="backBarButtonItem" title="Catalog" id="4Xo-hF-SUy"/>
-                    </navigationItem>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MJA-Yr-A42" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="926" y="571"/>
+        </scene>
+        <!--Table View Controller - History-->
+        <scene sceneID="kVQ-LS-iaw">
+            <objects>
+                <tableViewController id="QaW-TB-V6R" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="svF-wc-7LP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="historyCell" id="i06-BR-vAE">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i06-BR-vAE" id="0RX-cB-f8f">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="QaW-TB-V6R" id="S2A-ym-xI3"/>
+                            <outlet property="delegate" destination="QaW-TB-V6R" id="pML-sV-CEo"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="History" image="trollface.jpg" id="vs8-j3-dDp"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3sb-o5-p90" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="915" y="1318"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Vex-rW-GRa">
@@ -134,6 +162,7 @@
                     <connections>
                         <segue destination="CZ4-MO-1fc" kind="relationship" relationship="viewControllers" id="SUk-Ux-ee1"/>
                         <segue destination="apn-sR-LRz" kind="relationship" relationship="viewControllers" id="0di-Be-jkA"/>
+                        <segue destination="QaW-TB-V6R" kind="relationship" relationship="viewControllers" id="V1p-qf-1Nr"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
@@ -144,6 +173,7 @@
     <resources>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
+        <image name="trollface.jpg" width="39" height="39"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

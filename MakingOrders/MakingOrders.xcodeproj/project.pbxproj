@@ -49,6 +49,7 @@
 		A989C26E18AD87CD005689B7 /* JJRCatalogItemCustomization.m in Sources */ = {isa = PBXBuildFile; fileRef = A989C26D18AD87CD005689B7 /* JJRCatalogItemCustomization.m */; };
 		CEB0B14418AD9254007B8ED0 /* JJRCatalogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB0B14318AD9254007B8ED0 /* JJRCatalogCell.m */; };
 		CEB0B14618AD9CC6007B8ED0 /* trollface.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB0B14518AD9CC6007B8ED0 /* trollface.jpg */; };
+		CEB0B14918ADA8F3007B8ED0 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB0B14818ADA8F3007B8ED0 /* ThirdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,8 @@
 		CEB0B14218AD9254007B8ED0 /* JJRCatalogCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJRCatalogCell.h; sourceTree = "<group>"; };
 		CEB0B14318AD9254007B8ED0 /* JJRCatalogCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRCatalogCell.m; sourceTree = "<group>"; };
 		CEB0B14518AD9CC6007B8ED0 /* trollface.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trollface.jpg; sourceTree = "<group>"; };
+		CEB0B14718ADA8F3007B8ED0 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		CEB0B14818ADA8F3007B8ED0 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +231,8 @@
 				A989C26D18AD87CD005689B7 /* JJRCatalogItemCustomization.m */,
 				CEB0B14218AD9254007B8ED0 /* JJRCatalogCell.h */,
 				CEB0B14318AD9254007B8ED0 /* JJRCatalogCell.m */,
+				CEB0B14718ADA8F3007B8ED0 /* ThirdViewController.h */,
+				CEB0B14818ADA8F3007B8ED0 /* ThirdViewController.m */,
 			);
 			path = MakingOrders;
 			sourceTree = "<group>";
@@ -457,6 +462,7 @@
 				A907770518AD3F6A0062E9BE /* AFNetworkReachabilityManager.m in Sources */,
 				A907770918AD3F6A0062E9BE /* AFURLResponseSerialization.m in Sources */,
 				A907771218AD3F6A0062E9BE /* UIWebView+AFNetworking.m in Sources */,
+				CEB0B14918ADA8F3007B8ED0 /* ThirdViewController.m in Sources */,
 				A907770A18AD3F6A0062E9BE /* AFURLSessionManager.m in Sources */,
 				A907770B18AD3F6A0062E9BE /* AFNetworkActivityIndicatorManager.m in Sources */,
 				A90776AE18AD3EB20062E9BE /* main.m in Sources */,
