@@ -7,6 +7,8 @@
 //
 
 #import "ThirdViewController.h"
+#import "DataManager.h"
+#import "JJROrder.h"
 
 @interface ThirdViewController ()
 
@@ -28,12 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadData) name:kJJRCatalogReady object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,6 +40,14 @@
 }
 
 #pragma mark - Table view data source
+
+- (void)loadData
+{
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        self.itemHistory = [DataManager history];
+        [self.tableView reloadData];
+    }];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -65,7 +70,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"historyCell"];
     }
     // Configure the cell...
-    //self.itemHistory[indexPath.row];
+    JJROrder *order = (JJROrder *)self.itemHistory[indexPath.row];
+    cell.textLabel.text = order.accountNumber;
+    cell.detailTextLabel.text = order.detail;
     
     
     return cell;
