@@ -61,17 +61,17 @@
             </objects>
             <point key="canvasLocation" x="921" y="-194"/>
         </scene>
-        <!--Second View Controller - Cart-->
-        <scene sceneID="elf-Rn-sHd">
+        <!--Second View Controller-->
+        <scene sceneID="LUU-LK-Ao9">
             <objects>
-                <tableViewController id="apn-sR-LRz" customClass="SecondViewController" sceneMemberID="viewController">
+                <tableViewController id="2jd-Wl-Os9" customClass="SecondViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="cartCell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5Z5-xZ-5qe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" restorationIdentifier="catalogCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="catalogCell" id="gY9-q3-3xl" customClass="JJRCatalogCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gY9-q3-3xl" id="RhN-WY-Vnf">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -110,14 +110,38 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2jd-Wl-Os9" id="CUU-KF-fr8"/>
+                            <outlet property="delegate" destination="2jd-Wl-Os9" id="jR0-eH-xxz"/>
+                        </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Cart" image="second" id="LBV-5C-RMr"/>
-                    <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationItem key="navigationItem" id="N3E-Dj-XUE">
+                        <barButtonItem key="rightBarButtonItem" title="BUY!" id="MKK-Id-UeI">
+                            <connections>
+                                <action selector="purchaseCart:" destination="2jd-Wl-Os9" id="kXK-aG-YDm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MJA-Yr-A42" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WGR-bw-ZxN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="926" y="571"/>
+            <point key="canvasLocation" x="2153" y="518"/>
+        </scene>
+        <!--Navigation Controller - Cart-->
+        <scene sceneID="h4O-0S-Smh">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="6HS-O1-pVB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cart" image="second" id="Qoe-cs-57t"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N1d-Kt-gTc">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2jd-Wl-Os9" kind="relationship" relationship="rootViewController" id="aSj-9Q-ATx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wuz-VQ-5vo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1617" y="518"/>
         </scene>
         <!--Table View Controller - History-->
         <scene sceneID="kVQ-LS-iaw">
@@ -161,8 +185,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="CZ4-MO-1fc" kind="relationship" relationship="viewControllers" id="SUk-Ux-ee1"/>
-                        <segue destination="apn-sR-LRz" kind="relationship" relationship="viewControllers" id="0di-Be-jkA"/>
-                        <segue destination="QaW-TB-V6R" kind="relationship" relationship="viewControllers" id="V1p-qf-1Nr"/>
+                        <segue destination="6HS-O1-pVB" kind="relationship" relationship="viewControllers" id="jvW-LD-nIj"/>
+                        <segue destination="QaW-TB-V6R" kind="relationship" relationship="viewControllers" id="SOT-c6-RZ9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>

@@ -78,5 +78,8 @@
         [self.tableView reloadData];
     }];
 }
+- (IBAction)purchaseCart:(id)sender {
+    NSLog(@"OHMYGERSH buying teh cart!");
+}
 
 @end
