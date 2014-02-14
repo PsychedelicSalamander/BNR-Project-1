@@ -68,7 +68,7 @@
     
     
     
-    return cell;
+return cell;
 }
 
 - (void)newCartItem
@@ -79,13 +79,7 @@
     }];
 }
 - (IBAction)purchaseCart:(id)sender {
-    NSLog(@"OHMYGERSH buying teh cart!");
-    if ([self.cartItems count] == 0)
-    {
-        return;
-    }
-    
-    
+	[DataManager placeOrder];
 }
 
 @end

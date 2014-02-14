@@ -10,17 +10,20 @@
 
 @interface JJRCartItem : NSObject
 @property (nonatomic, copy)NSString *name;
-@property (nonatomic)int basePrice;
 @property (nonatomic, copy)NSString *optionalTextSelection;
 @property (nonatomic, copy)NSString *optionalLogoSelection;
 @property (nonatomic, copy)NSString *optionalColorSelection;
 @property (nonatomic, copy)NSString *optionalSizeSelection;
+@property (nonatomic, strong) NSString *imageUrl;
+
+@property (nonatomic)int basePrice;
 @property (nonatomic, readonly)BOOL hasOptionalTextSelection;
 @property (nonatomic, readonly)BOOL hasOptionalLogoSelection;
 @property (nonatomic, readonly)BOOL hasOptionalSizeSelection;
 @property (nonatomic, readonly)BOOL hasOptionalColorSelection;
-@property (nonatomic, strong) NSString *imageUrl;
 
--(instancetype)initWithName:(NSString *)name basePrice:(int)basePrice;
+
+- (instancetype)initWithName:(NSString *)name basePrice:(int)basePrice;
+- (NSString *)orderSummary;
 
 @end
