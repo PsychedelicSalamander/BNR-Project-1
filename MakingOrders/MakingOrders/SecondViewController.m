@@ -22,6 +22,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newCartItem) name:kJJRNewCartItem object:nil];
+    [self newCartItem];
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,6 +80,10 @@ return cell;
     }];
 }
 - (IBAction)purchaseCart:(id)sender {
+    if ([self.cartItems count] == 0)
+    {
+        return;
+    }
 	[DataManager placeOrder];
 }
 

@@ -30,7 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadData) name:kJJRCatalogReady object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadData) name:kJJRHistoryReady object:nil];
+    [self loadData];
 }
 
 - (void)didReceiveMemoryWarning
