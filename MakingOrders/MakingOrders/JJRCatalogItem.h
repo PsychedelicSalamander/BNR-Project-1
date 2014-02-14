@@ -12,7 +12,7 @@
 @interface JJRCatalogItem : NSObject
 
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, assign) NSInteger basePrice;
+@property (nonatomic, assign) int basePrice;
 @property (nonatomic, strong) NSString *imageUrl;
 @property (nonatomic, strong) JJRCatalogItemCustomization *customizations;
 

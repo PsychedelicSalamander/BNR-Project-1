@@ -10,10 +10,12 @@
 
 // Prefs.h
 static NSString * const kJJRCatalogReady = @"kJJRCatalogReady";
+static NSString * const kJJRNewCartItem = @"kJJRNewCartItem";
 
 @interface DataManager : NSObject
 
 + (void)loadProducts;
 + (NSArray *)items;
++ (NSArray *)cartItems;
 
 @end

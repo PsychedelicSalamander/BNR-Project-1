@@ -19,6 +19,7 @@
 @property (nonatomic, readonly)BOOL hasOptionalLogoSelection;
 @property (nonatomic, readonly)BOOL hasOptionalSizeSelection;
 @property (nonatomic, readonly)BOOL hasOptionalColorSelection;
+@property (nonatomic, strong) NSString *imageUrl;
 
 -(instancetype)initWithName:(NSString *)name basePrice:(int)basePrice;
 
