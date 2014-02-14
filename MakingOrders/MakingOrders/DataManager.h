@@ -11,6 +11,7 @@
 // Prefs.h
 static NSString * const kJJRCatalogReady = @"kJJRCatalogReady";
 static NSString * const kJJRHistoryReady = @"kJJRHistoryReady";
+static NSString * const kJJRStatusReady = @"kJJRStatusReady";
 static NSString * const kJJRNewCartItem = @"kJJRNewCartItem";
 
 @interface DataManager : NSObject
@@ -19,6 +20,7 @@ static NSString * const kJJRNewCartItem = @"kJJRNewCartItem";
 + (NSArray *)items;
 + (NSMutableArray *)history;
 + (NSMutableArray *)cartItems;
-
++ (void)loadOrderStatusWithOrderKey:(NSString *)key;
 + (void)placeOrder;
+
 @end

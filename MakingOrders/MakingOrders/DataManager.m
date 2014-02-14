@@ -121,6 +121,31 @@ NSMutableArray *_cart;
 	];
 }
 
++ (void)loadOrderStatusWithOrderKey:(NSString *)key
+{
+	NSString *statusUrl = [NSString stringWithFormat:@"http://bnr-fruititems.appspot.com/status?order_id=%@", key];
+
+	AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+
+	manager.responseSerializer = AFHTTPResponseSerializer.serializer;
+	[manager GET:statusUrl parameters:@{}
+		 success:^(AFHTTPRequestOperation *operation, id responseObject) {
+
+			 NSString *statusString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+
+			 [NSOperationQueue.mainQueue addOperationWithBlock:^{
+
+				 dispatch_async(dispatch_get_main_queue(), ^{
+                     [NSNotificationCenter.defaultCenter postNotificationName:kJJRStatusReady object:self userInfo:@{@"status":statusString}];
+				 });
+
+			 }];
+
+		 }
+		 failure:^(AFHTTPRequestOperation *operation, NSError *error) {}
+	];
+}
+
 + (void)parseHistory:(NSString *)historyString
 {
 //	NSLog(@"%@", historyString);
@@ -214,6 +239,9 @@ NSMutableArray *_cart;
 
 		[_cart addObject:item];
 	}
+
+	[[self class] loadOrderStatusWithOrderKey:@"ahBzfmJuci1mcnVpdGl0ZW1zcg0LEgVPcmRlchi51RUM"];
+
 }
 
 
