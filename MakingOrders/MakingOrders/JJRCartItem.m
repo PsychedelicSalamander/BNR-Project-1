@@ -40,9 +40,13 @@
 {
 	NSMutableString * _orderSummary = @"".mutableCopy;
 	[_orderSummary appendFormat:@"%@", self.name ?: @""];
+    if (self.hasOptionalTextSelection)
 	[_orderSummary appendFormat:@",%@", self.optionalTextSelection ?: @""];
+    if (self.hasOptionalLogoSelection)
 	[_orderSummary appendFormat:@",%@", self.optionalLogoSelection ?: @""];
+    if (self.hasOptionalColorSelection)
 	[_orderSummary appendFormat:@",%@", self.optionalColorSelection ?: @""];
+    if (self.hasOptionalSizeSelection)
 	[_orderSummary appendFormat:@",%@", self.optionalSizeSelection ?: @""];
 
 	return _orderSummary;

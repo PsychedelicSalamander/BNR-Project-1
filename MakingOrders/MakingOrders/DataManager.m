@@ -202,6 +202,8 @@ NSMutableArray *_cart;
 
 	AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
 	manager.responseSerializer = AFJSONResponseSerializer.serializer;
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    NSLog(@"About to post %@", orderUrl);
 	[manager POST:orderUrl parameters:@{}
 		 success:^(AFHTTPRequestOperation *operation, id responseObject) {
 			 [DataManager loadHistory];
