@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+// Prefs.h
+static NSString * const kJJRCatalogReady = @"kJJRCatalogReady";
+
 @interface DataManager : NSObject
 
 + (void)loadProducts;
