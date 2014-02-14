@@ -19,4 +19,5 @@ static NSString * const kJJRNewCartItem = @"kJJRNewCartItem";
 + (NSMutableArray *)history;
 + (NSMutableArray *)cartItems;
 
++ (void)placeOrder;
 @end

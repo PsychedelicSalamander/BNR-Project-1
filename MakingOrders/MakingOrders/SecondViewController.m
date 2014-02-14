@@ -79,7 +79,7 @@
     }];
 }
 - (IBAction)purchaseCart:(id)sender {
-    NSLog(@"OHMYGERSH buying teh cart!");
+	[DataManager placeOrder];
 }
 
 @end

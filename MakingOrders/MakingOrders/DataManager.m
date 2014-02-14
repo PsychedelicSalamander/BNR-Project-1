@@ -124,8 +124,7 @@ NSMutableArray *_cart;
 //	NSLog(@"%@", historyString);
     NSArray *lines = [historyString componentsSeparatedByString:@"\n"];
 
-	NSInteger lengthMinusLastLine = lines.count - 1;
-	for (NSInteger i = 1; i < lengthMinusLastLine; i++)
+	for (NSInteger i = 1; i < lines.count; i++)
 	{
 		[self getOrderAndKeyString:lines index:i];
 	}
@@ -163,7 +162,13 @@ NSMutableArray *_cart;
 
 		[DataManager.history addObject:order];
 	}
+
+	NSLog(@"%i", DataManager.history.count);
 }
 
 
++ (void)placeOrder
+{
+
+}
 @end
