@@ -25,7 +25,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.catalogItems = [DataManager items];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadData) name:@"Something" object:nil];
+}
+
+- (void)loadData
+{
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        self.catalogItems = [DataManager items];
+        [self.tableView reloadData];
+    }];
 }
 
 - (void)didReceiveMemoryWarning
