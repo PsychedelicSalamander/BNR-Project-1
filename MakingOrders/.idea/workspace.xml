@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="045a4178-f1b0-4e6a-b897-cfe280a98abc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MakingOrders.xcodeproj/xcuserdata/JBott.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterPath="$PROJECT_DIR$/MakingOrders.xcodeproj/xcuserdata/JBott.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MakingOrders/DataManager.h" afterPath="$PROJECT_DIR$/MakingOrders/DataManager.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MakingOrders/DataManager.m" afterPath="$PROJECT_DIR$/MakingOrders/DataManager.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MakingOrders/JJRCatalogItemCustomization.h" afterPath="$PROJECT_DIR$/MakingOrders/JJRCatalogItemCustomization.h" />
     </list>
     <ignored path="MakingOrders.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,10 +35,28 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="JJRCatalogItemCustomization.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MakingOrders/JJRCatalogItemCustomization.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="16" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="647">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JJRCatalogItemCustomization.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MakingOrders/JJRCatalogItemCustomization.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="44" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="677">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DataManager.m" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MakingOrders/DataManager.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="0" selection-start="2287" selection-end="2583" vertical-scroll-proportion="0.5371094" vertical-offset="385" max-vertical-offset="1667">
+            <state line="75" column="72" selection-start="2526" selection-end="2526" vertical-scroll-proportion="0.21484375" vertical-offset="550" max-vertical-offset="1502">
               <folding>
                 <element signature="e#677#680#1" expanded="false" />
                 <element signature="e#698#1087#0" expanded="false" />
@@ -90,6 +107,7 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/MakingOrders/DataManager.h" />
+        <option value="$PROJECT_DIR$/MakingOrders/JJRCatalogItemCustomization.h" />
         <option value="$PROJECT_DIR$/MakingOrders/DataManager.m" />
       </list>
     </option>
@@ -237,12 +255,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/MakingOrders/DataManager.m</url>
-          <line>90</line>
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="1" />
     </breakpoint-manager>
   </component>
@@ -272,9 +284,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MakingOrders/JJRCatalogItemCustomization.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="16" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="647">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MakingOrders/JJRCatalogItemCustomization.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="44" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="677">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MakingOrders/DataManager.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="0" selection-start="2287" selection-end="2583" vertical-scroll-proportion="0.5371094" vertical-offset="385" max-vertical-offset="1667">
+        <state line="75" column="72" selection-start="2526" selection-end="2526" vertical-scroll-proportion="0.21484375" vertical-offset="550" max-vertical-offset="1502">
           <folding>
             <element signature="e#677#680#1" expanded="false" />
             <element signature="e#698#1087#0" expanded="false" />
