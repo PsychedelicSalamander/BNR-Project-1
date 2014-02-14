@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		699BBEB118AD874A005D1105 /* JJRCartItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 699BBEB018AD874A005D1105 /* JJRCartItem.m */; };
+		699BBEB718AD9C2D005D1105 /* JJROrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 699BBEB618AD9C2D005D1105 /* JJROrder.m */; };
 		A90776A218AD3EB20062E9BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90776A118AD3EB20062E9BE /* Foundation.framework */; };
 		A90776A418AD3EB20062E9BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90776A318AD3EB20062E9BE /* CoreGraphics.framework */; };
 		A90776A618AD3EB20062E9BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90776A518AD3EB20062E9BE /* UIKit.framework */; };
@@ -61,6 +62,8 @@
 /* Begin PBXFileReference section */
 		699BBEAF18AD874A005D1105 /* JJRCartItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJRCartItem.h; sourceTree = "<group>"; };
 		699BBEB018AD874A005D1105 /* JJRCartItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRCartItem.m; sourceTree = "<group>"; };
+		699BBEB518AD9C2D005D1105 /* JJROrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJROrder.h; sourceTree = "<group>"; };
+		699BBEB618AD9C2D005D1105 /* JJROrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJROrder.m; sourceTree = "<group>"; };
 		A907769E18AD3EB20062E9BE /* MakingOrders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakingOrders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A90776A118AD3EB20062E9BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A90776A318AD3EB20062E9BE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -158,6 +161,8 @@
 		699BBEAB18AD8601005D1105 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				699BBEB518AD9C2D005D1105 /* JJROrder.h */,
+				699BBEB618AD9C2D005D1105 /* JJROrder.m */,
 				699BBEAF18AD874A005D1105 /* JJRCartItem.h */,
 				699BBEB018AD874A005D1105 /* JJRCartItem.m */,
 			);
@@ -420,6 +425,7 @@
 				A907771018AD3F6A0062E9BE /* UIProgressView+AFNetworking.m in Sources */,
 				A989C26E18AD87CD005689B7 /* JJRCatalogItemCustomization.m in Sources */,
 				A907770E18AD3F6A0062E9BE /* UIButton+AFNetworking.m in Sources */,
+				699BBEB718AD9C2D005D1105 /* JJROrder.m in Sources */,
 				A907771118AD3F6A0062E9BE /* UIRefreshControl+AFNetworking.m in Sources */,
 				A907770D18AD3F6A0062E9BE /* UIAlertView+AFNetworking.m in Sources */,
 				699BBEB118AD874A005D1105 /* JJRCartItem.m in Sources */,

@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface JJROrder : NSObject
-
+@property (nonatomic, strong)NSString *key;
+@property (nonatomic, strong)NSString *accountNumber;
+@property (nonatomic, strong)NSString *detail;
 @end
