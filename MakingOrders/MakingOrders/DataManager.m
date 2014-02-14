@@ -14,6 +14,8 @@
 NSMutableArray *_items;
 NSMutableArray *_cart;
 
+
+
 @implementation DataManager
 
 + (void)loadProducts
@@ -22,11 +24,10 @@ NSMutableArray *_cart;
 
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];//[JSONResponseSerializerWithData serializer];
+    manager.responseSerializer = AFJSONResponseSerializer.serializer;
     [manager GET:@"http://bnr-fruititems.appspot.com/" parameters:@{}
          success:^(AFHTTPRequestOperation *operation, id responseObject) {
-             
-             NSLog(@"success %@", responseObject);
+
 			 [[self class] parseProducts:responseObject];
              [NSOperationQueue.mainQueue addOperationWithBlock:^{
 				 [[self class] loadHistory];
@@ -92,7 +93,63 @@ NSMutableArray *_cart;
 
 + (void)loadHistory
 {
+	AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
 
+	manager.responseSerializer = AFHTTPResponseSerializer.serializer;
+	[manager GET:@"http://bnr-fruititems.appspot.com/history" parameters:@{}
+		 success:^(AFHTTPRequestOperation *operation, id responseObject) {
+
+             NSString *historyString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+
+			 [[self class] parseHistory:historyString];
+//			 [NSOperationQueue.mainQueue addOperationWithBlock:^{
+//				 [[self class] loadHistory];
+//			 }];
+
+		 }
+		 failure:^(AFHTTPRequestOperation *operation, NSError *error) {}
+	];
 }
+
++ (void)parseHistory:(NSString *)historyString
+{
+//	NSLog(@"%@", historyString);
+    NSArray *lines = [historyString componentsSeparatedByString:@"\n"];
+
+	NSInteger lengthMinusLastLine = lines.count - 1;
+	for (NSInteger i = 1; i < lengthMinusLastLine; i++)
+	{
+		[self getOrderAndKeyString:lines index:i];
+	}
+}
+
++ (void)getOrderAndKeyString:(NSArray *)lines index:(NSInteger)i
+{
+	NSString *substring = lines[i];
+	NSRange searchedRange = NSMakeRange(0, substring.length);
+	NSString *pattern = @"ACCOUNT (.*),.* ORDER (.*) KEY (.*)";
+	NSError  *error = nil;
+    
+	NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern: pattern options:0 error:&error];
+	NSArray* matches = [regex matchesInString:substring options:0 range:searchedRange];
+    
+	for (NSTextCheckingResult* match in matches) {
+
+
+		NSRange groupId = [match rangeAtIndex:1];
+		NSString *orderID = [substring substringWithRange:groupId];
+		NSLog(@"orderID: %@", orderID);
+
+		NSRange groupSummary = [match rangeAtIndex:2];
+		NSString *orderSummary = [substring substringWithRange:groupSummary];
+		NSLog(@"orderSummary: %@", orderSummary);
+
+		NSRange groupKey = [match rangeAtIndex:3];
+		NSString *key = [substring substringWithRange:groupKey];
+		NSLog(@"key: %@", key);
+
+	}
+}
+
 
 @end
