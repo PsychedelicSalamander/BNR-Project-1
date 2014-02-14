@@ -46,6 +46,7 @@
 		A907771D18AD41A50062E9BE /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A907771C18AD41A50062E9BE /* DataManager.m */; };
 		A989C26B18AD874B005689B7 /* JJRCatalogItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A989C26A18AD874B005689B7 /* JJRCatalogItem.m */; };
 		A989C26E18AD87CD005689B7 /* JJRCatalogItemCustomization.m in Sources */ = {isa = PBXBuildFile; fileRef = A989C26D18AD87CD005689B7 /* JJRCatalogItemCustomization.m */; };
+		CEB0B14418AD9254007B8ED0 /* JJRCatalogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB0B14318AD9254007B8ED0 /* JJRCatalogCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,8 @@
 		A989C26A18AD874B005689B7 /* JJRCatalogItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRCatalogItem.m; sourceTree = "<group>"; };
 		A989C26C18AD87CD005689B7 /* JJRCatalogItemCustomization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJRCatalogItemCustomization.h; sourceTree = "<group>"; };
 		A989C26D18AD87CD005689B7 /* JJRCatalogItemCustomization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRCatalogItemCustomization.m; sourceTree = "<group>"; };
+		CEB0B14218AD9254007B8ED0 /* JJRCatalogCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJRCatalogCell.h; sourceTree = "<group>"; };
+		CEB0B14318AD9254007B8ED0 /* JJRCatalogCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRCatalogCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +218,8 @@
 				A989C26A18AD874B005689B7 /* JJRCatalogItem.m */,
 				A989C26C18AD87CD005689B7 /* JJRCatalogItemCustomization.h */,
 				A989C26D18AD87CD005689B7 /* JJRCatalogItemCustomization.m */,
+				CEB0B14218AD9254007B8ED0 /* JJRCatalogCell.h */,
+				CEB0B14318AD9254007B8ED0 /* JJRCatalogCell.m */,
 			);
 			path = MakingOrders;
 			sourceTree = "<group>";
@@ -437,6 +442,7 @@
 				A907771818AD3FF60062E9BE /* NSArray+LinqExtensions.m in Sources */,
 				A90776BB18AD3EB20062E9BE /* FirstViewController.m in Sources */,
 				A907770818AD3F6A0062E9BE /* AFURLRequestSerialization.m in Sources */,
+				CEB0B14418AD9254007B8ED0 /* JJRCatalogCell.m in Sources */,
 				A907770418AD3F6A0062E9BE /* AFHTTPSessionManager.m in Sources */,
 				A907770518AD3F6A0062E9BE /* AFNetworkReachabilityManager.m in Sources */,
 				A907770918AD3F6A0062E9BE /* AFURLResponseSerialization.m in Sources */,

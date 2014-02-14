@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Rhv-Fa-XYv">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="catalogCell" selectionStyle="default" indentationWidth="10" id="Rhv-Fa-XYv" customClass="JJRCatalogCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rhv-Fa-XYv" id="eEt-W1-mSv">
@@ -45,6 +45,12 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="Title" destination="y1g-vt-MpD" id="lKG-33-cN4"/>
+                                    <outlet property="image" destination="cJL-5J-syt" id="xeb-ik-7ZF"/>
+                                    <outlet property="subtitle" destination="JYU-1m-FqW" id="O0y-ct-IcG"/>
+                                    <outlet property="value" destination="uhh-R3-H8y" id="KZQ-t6-WDz"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>

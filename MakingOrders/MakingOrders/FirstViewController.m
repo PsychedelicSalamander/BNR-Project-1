@@ -7,8 +7,15 @@
 //
 
 #import "FirstViewController.h"
+#import "DataManager.h"
+#import "JJRCatalogCell.h"
+#import "JJRCatalogItem.h"
+#import "JJRCatalogItemCustomization.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface FirstViewController ()
+
+@property (nonatomic, strong) NSArray *catalogItems;
 
 @end
 
@@ -18,6 +25,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.catalogItems = [DataManager items];
 }
 
 - (void)didReceiveMemoryWarning
@@ -28,16 +36,20 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return [self.catalogItems count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"catalogCell"];
-    if (cell == nil)
-    {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"catalogCell"];
-    }
+    JJRCatalogCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"catalogCell"];
+    
+    JJRCatalogItem *catalogItem = (JJRCatalogItem *)self.catalogItems[indexPath.row];
+    
+    cell.Title.text = catalogItem.name;
+    cell.subtitle.text = @"";
+    cell.value.text = [NSString stringWithFormat:@"%d", catalogItem.basePrice];
+    [cell.imageView setImageWithURL:[NSURL URLWithString:catalogItem.imageUrl]];
+
 //    
 //    NSDictionary *event = self.ghEvents[indexPath.row];
 //    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@", event[@"type"], event[@"created_at"]];
@@ -52,7 +64,7 @@
 //    [cell.imageView setImageWithURL:[NSURL URLWithString:avatarURLStr] placeholderImage:[UIImage imageNamed:@"flowers.jpg"]];
 //    
     
-    cell.textLabel.text = [NSString stringWithFormat:@"BORP"];
+
     
     return cell;
 }
