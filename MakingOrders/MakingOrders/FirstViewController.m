@@ -25,7 +25,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadData) name:@"Something" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadData) name:kJJRCatalogReady object:nil];
 }
 
 - (void)loadData
@@ -51,12 +51,17 @@
 {
     JJRCatalogCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"catalogCell"];
     
+    if (cell == nil)
+    {
+        cell = [[JJRCatalogCell alloc]init];
+    }
+    
     JJRCatalogItem *catalogItem = (JJRCatalogItem *)self.catalogItems[indexPath.row];
     
     cell.Title.text = catalogItem.name;
     cell.subtitle.text = @"";
     cell.value.text = [NSString stringWithFormat:@"%d", catalogItem.basePrice];
-    [cell.imageView setImageWithURL:[NSURL URLWithString:catalogItem.imageUrl]];
+    [cell.imageView setImageWithURL:[NSURL URLWithString:catalogItem.imageUrl] placeholderImage:[UIImage imageNamed:@"trollface.jpg"]];
 
 //    
 //    NSDictionary *event = self.ghEvents[indexPath.row];

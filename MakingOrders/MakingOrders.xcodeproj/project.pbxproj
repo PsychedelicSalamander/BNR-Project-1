@@ -47,6 +47,7 @@
 		A989C26B18AD874B005689B7 /* JJRCatalogItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A989C26A18AD874B005689B7 /* JJRCatalogItem.m */; };
 		A989C26E18AD87CD005689B7 /* JJRCatalogItemCustomization.m in Sources */ = {isa = PBXBuildFile; fileRef = A989C26D18AD87CD005689B7 /* JJRCatalogItemCustomization.m */; };
 		CEB0B14418AD9254007B8ED0 /* JJRCatalogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB0B14318AD9254007B8ED0 /* JJRCatalogCell.m */; };
+		CEB0B14618AD9CC6007B8ED0 /* trollface.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB0B14518AD9CC6007B8ED0 /* trollface.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		A989C26D18AD87CD005689B7 /* JJRCatalogItemCustomization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRCatalogItemCustomization.m; sourceTree = "<group>"; };
 		CEB0B14218AD9254007B8ED0 /* JJRCatalogCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJRCatalogCell.h; sourceTree = "<group>"; };
 		CEB0B14318AD9254007B8ED0 /* JJRCatalogCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRCatalogCell.m; sourceTree = "<group>"; };
+		CEB0B14518AD9CC6007B8ED0 /* trollface.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trollface.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 		A90776A718AD3EB20062E9BE /* MakingOrders */ = {
 			isa = PBXGroup;
 			children = (
+				CEB0B14518AD9CC6007B8ED0 /* trollface.jpg */,
 				699BBEAB18AD8601005D1105 /* Models */,
 				A907771318AD3F710062E9BE /* ThirdParty */,
 				A90776B018AD3EB20062E9BE /* AppDelegate.h */,
@@ -402,6 +405,7 @@
 			files = (
 				A90776B818AD3EB20062E9BE /* Main_iPad.storyboard in Resources */,
 				A90776C018AD3EB20062E9BE /* Images.xcassets in Resources */,
+				CEB0B14618AD9CC6007B8ED0 /* trollface.jpg in Resources */,
 				A90776B518AD3EB20062E9BE /* Main_iPhone.storyboard in Resources */,
 				A90776AC18AD3EB20062E9BE /* InfoPlist.strings in Resources */,
 			);
