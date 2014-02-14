@@ -9,8 +9,10 @@
 #import "DataManager.h"
 #import "AFNetworking/AFNetworking.h"
 #import "JJRCatalogItem.h"
+#import "JJRCartItem.h"
 
 NSMutableArray *_items;
+NSMutableArray *_cart;
 
 @implementation DataManager
 
@@ -73,6 +75,19 @@ NSMutableArray *_items;
 + (NSArray *)items
 {
 	return _items;
+}
+
++ (NSArray *)cartItems
+{
+    return _cart;
+}
+
++ (void)addCartItem:(JJRCartItem *)cartItem
+{
+    [_cart addObject:cartItem];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [NSNotificationCenter.defaultCenter postNotificationName:kJJRNewCartItem object:self userInfo:nil];
+    });
 }
 
 + (void)loadHistory
