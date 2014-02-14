@@ -170,5 +170,41 @@ NSMutableArray *_cart;
 + (void)placeOrder
 {
 
+	AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+
+	
+	
+	manager.responseSerializer = AFJSONResponseSerializer.serializer;
+
+	NSMutableString *totallyUglyAndSuperLongCartDescriptor = @"".mutableCopy;
+
+	for (JJRCartItem *item in _cart)
+	{
+		[totallyUglyAndSuperLongCartDescriptor appendFormat:@"%@", item.orderSummary ?: @""];
+	}
+
+
+	NSString *orderUrl = [NSString stringWithFormat:@"http://bnr-fruititems.appspot.com/order?account=TZ123&items=%@", totallyUglyAndSuperLongCartDescriptor];
+
+	[manager GET:orderUrl parameters:@{}
+		 success:^(AFHTTPRequestOperation *operation, id responseObject) {
+
+//			 [[self class] parseProducts:responseObject];
+//			 [NSOperationQueue.mainQueue addOperationWithBlock:^{
+//				 [[self class] loadHistory];
+//			 }];
+
+			 
+
+		 }
+		 failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+
+			 // get the json here
+			 //        id json = error.userInfo[JSONResponseSerializerWithDataKey];
+			 //        NSLog(@"failure %@", json);
+		 }];
 }
+
+
+
 @end

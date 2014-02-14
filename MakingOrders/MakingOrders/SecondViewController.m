@@ -68,7 +68,7 @@
     
     
     
-    return cell;
+return cell;
 }
 
 - (void)newCartItem
