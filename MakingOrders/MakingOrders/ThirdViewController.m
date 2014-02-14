@@ -9,6 +9,7 @@
 #import "ThirdViewController.h"
 #import "DataManager.h"
 #import "JJROrder.h"
+#import "ItemStatusViewController.h"
 
 @interface ThirdViewController ()
 
@@ -77,6 +78,18 @@
     
     
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    ItemStatusViewController *vc = (ItemStatusViewController *)segue.destinationViewController;
+    if (vc)
+    {
+        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+        JJROrder *order = self.itemHistory[path.row];
+        
+        vc.url = [NSString stringWithFormat:@"http://bnr-fruititems.appspot.com/status?order_id=%@", order.key];
+    }
 }
 
 @end

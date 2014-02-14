@@ -12,7 +12,7 @@
 #import "JJRCatalogItem.h"
 #import "JJRCatalogItemCustomization.h"
 #import "UIImageView+AFNetworking.h"
-
+#import "JJRCatalogItemDetailViewController.h"
 @interface FirstViewController ()
 
 @property (nonatomic, strong) NSArray *catalogItems;
@@ -80,6 +80,17 @@
 
     
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    JJRCatalogItemDetailViewController *vc = (JJRCatalogItemDetailViewController *)segue.destinationViewController;
+    
+    if (vc)
+    {
+        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+        vc.item = self.catalogItems[path.row];
+    }
 }
 
 

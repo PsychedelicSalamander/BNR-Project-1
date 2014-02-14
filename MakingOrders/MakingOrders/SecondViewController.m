@@ -25,6 +25,11 @@
     [self newCartItem];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self newCartItem];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

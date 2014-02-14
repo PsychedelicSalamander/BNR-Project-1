@@ -50,6 +50,10 @@
 		CEB0B14418AD9254007B8ED0 /* JJRCatalogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB0B14318AD9254007B8ED0 /* JJRCatalogCell.m */; };
 		CEB0B14618AD9CC6007B8ED0 /* trollface.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB0B14518AD9CC6007B8ED0 /* trollface.jpg */; };
 		CEB0B14918ADA8F3007B8ED0 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB0B14818ADA8F3007B8ED0 /* ThirdViewController.m */; };
+		CEB0B14C18ADC795007B8ED0 /* ItemStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB0B14B18ADC795007B8ED0 /* ItemStatusViewController.m */; };
+		CEB0B15318ADCAC9007B8ED0 /* JJRCatalogItemDetailImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB0B14E18ADCAC9007B8ED0 /* JJRCatalogItemDetailImageCell.m */; };
+		CEB0B15418ADCAC9007B8ED0 /* JJRCatalogItemDetailNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB0B15018ADCAC9007B8ED0 /* JJRCatalogItemDetailNameCell.m */; };
+		CEB0B15518ADCAC9007B8ED0 /* JJRCatalogItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB0B15218ADCAC9007B8ED0 /* JJRCatalogItemDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +144,14 @@
 		CEB0B14518AD9CC6007B8ED0 /* trollface.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trollface.jpg; sourceTree = "<group>"; };
 		CEB0B14718ADA8F3007B8ED0 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		CEB0B14818ADA8F3007B8ED0 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		CEB0B14A18ADC795007B8ED0 /* ItemStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemStatusViewController.h; sourceTree = "<group>"; };
+		CEB0B14B18ADC795007B8ED0 /* ItemStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemStatusViewController.m; sourceTree = "<group>"; };
+		CEB0B14D18ADCAC9007B8ED0 /* JJRCatalogItemDetailImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJRCatalogItemDetailImageCell.h; sourceTree = "<group>"; };
+		CEB0B14E18ADCAC9007B8ED0 /* JJRCatalogItemDetailImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRCatalogItemDetailImageCell.m; sourceTree = "<group>"; };
+		CEB0B14F18ADCAC9007B8ED0 /* JJRCatalogItemDetailNameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJRCatalogItemDetailNameCell.h; sourceTree = "<group>"; };
+		CEB0B15018ADCAC9007B8ED0 /* JJRCatalogItemDetailNameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRCatalogItemDetailNameCell.m; sourceTree = "<group>"; };
+		CEB0B15118ADCAC9007B8ED0 /* JJRCatalogItemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJRCatalogItemDetailViewController.h; sourceTree = "<group>"; };
+		CEB0B15218ADCAC9007B8ED0 /* JJRCatalogItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJRCatalogItemDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +226,12 @@
 		A90776A718AD3EB20062E9BE /* MakingOrders */ = {
 			isa = PBXGroup;
 			children = (
+				CEB0B14D18ADCAC9007B8ED0 /* JJRCatalogItemDetailImageCell.h */,
+				CEB0B14E18ADCAC9007B8ED0 /* JJRCatalogItemDetailImageCell.m */,
+				CEB0B14F18ADCAC9007B8ED0 /* JJRCatalogItemDetailNameCell.h */,
+				CEB0B15018ADCAC9007B8ED0 /* JJRCatalogItemDetailNameCell.m */,
+				CEB0B15118ADCAC9007B8ED0 /* JJRCatalogItemDetailViewController.h */,
+				CEB0B15218ADCAC9007B8ED0 /* JJRCatalogItemDetailViewController.m */,
 				CEB0B14518AD9CC6007B8ED0 /* trollface.jpg */,
 				699BBEAB18AD8601005D1105 /* Models */,
 				A907771318AD3F710062E9BE /* ThirdParty */,
@@ -233,6 +251,8 @@
 				CEB0B14318AD9254007B8ED0 /* JJRCatalogCell.m */,
 				CEB0B14718ADA8F3007B8ED0 /* ThirdViewController.h */,
 				CEB0B14818ADA8F3007B8ED0 /* ThirdViewController.m */,
+				CEB0B14A18ADC795007B8ED0 /* ItemStatusViewController.h */,
+				CEB0B14B18ADC795007B8ED0 /* ItemStatusViewController.m */,
 			);
 			path = MakingOrders;
 			sourceTree = "<group>";
@@ -436,6 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB0B15318ADCAC9007B8ED0 /* JJRCatalogItemDetailImageCell.m in Sources */,
 				A907771018AD3F6A0062E9BE /* UIProgressView+AFNetworking.m in Sources */,
 				A989C26E18AD87CD005689B7 /* JJRCatalogItemCustomization.m in Sources */,
 				A907770E18AD3F6A0062E9BE /* UIButton+AFNetworking.m in Sources */,
@@ -449,18 +470,21 @@
 				A989C26B18AD874B005689B7 /* JJRCatalogItem.m in Sources */,
 				A907770318AD3F6A0062E9BE /* AFHTTPRequestOperationManager.m in Sources */,
 				A907770718AD3F6A0062E9BE /* AFURLConnectionOperation.m in Sources */,
+				CEB0B14C18ADC795007B8ED0 /* ItemStatusViewController.m in Sources */,
 				A907771918AD3FF60062E9BE /* NSDictionary+LinqExtensions.m in Sources */,
 				A907770F18AD3F6A0062E9BE /* UIImageView+AFNetworking.m in Sources */,
 				A907770218AD3F6A0062E9BE /* AFHTTPRequestOperation.m in Sources */,
 				A907770C18AD3F6A0062E9BE /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				A907771D18AD41A50062E9BE /* DataManager.m in Sources */,
 				A907771818AD3FF60062E9BE /* NSArray+LinqExtensions.m in Sources */,
+				CEB0B15518ADCAC9007B8ED0 /* JJRCatalogItemDetailViewController.m in Sources */,
 				A90776BB18AD3EB20062E9BE /* FirstViewController.m in Sources */,
 				A907770818AD3F6A0062E9BE /* AFURLRequestSerialization.m in Sources */,
 				CEB0B14418AD9254007B8ED0 /* JJRCatalogCell.m in Sources */,
 				A907770418AD3F6A0062E9BE /* AFHTTPSessionManager.m in Sources */,
 				A907770518AD3F6A0062E9BE /* AFNetworkReachabilityManager.m in Sources */,
 				A907770918AD3F6A0062E9BE /* AFURLResponseSerialization.m in Sources */,
+				CEB0B15418ADCAC9007B8ED0 /* JJRCatalogItemDetailNameCell.m in Sources */,
 				A907771218AD3F6A0062E9BE /* UIWebView+AFNetworking.m in Sources */,
 				CEB0B14918ADA8F3007B8ED0 /* ThirdViewController.m in Sources */,
 				A907770A18AD3F6A0062E9BE /* AFURLSessionManager.m in Sources */,

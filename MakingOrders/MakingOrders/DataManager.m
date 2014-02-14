@@ -26,9 +26,9 @@ NSMutableArray *_cart;
 	_history = @[].mutableCopy;
 	_cart = @[].mutableCopy;
 
-#if DEBUG
-	[[self class] populateCartWithFakeData];
-#endif
+//#if DEBUG
+//	[[self class] populateCartWithFakeData];
+//#endif
 
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
@@ -205,9 +205,11 @@ NSMutableArray *_cart;
 	[manager POST:orderUrl parameters:@{}
 		 success:^(AFHTTPRequestOperation *operation, id responseObject) {
 			 [DataManager loadHistory];
+             [_cart removeAllObjects];
+             [NSNotificationCenter.defaultCenter postNotificationName:kJJRNewCartItem object:self userInfo:nil];
 		 }
 		 failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-
+             NSLog(@"Something bad happened: %@", [error localizedDescription]);
 			 // get the json here
 			 //        id json = error.userInfo[JSONResponseSerializerWithDataKey];
 			 //        NSLog(@"failure %@", json);

@@ -9,6 +9,7 @@
 #import "ItemStatusViewController.h"
 
 @interface ItemStatusViewController ()
+@property (weak, nonatomic) IBOutlet UIWebView *WebView;
 
 @end
 
@@ -27,6 +28,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.url]];
+    [self.WebView loadRequest:request];
 }
 
 - (void)didReceiveMemoryWarning
