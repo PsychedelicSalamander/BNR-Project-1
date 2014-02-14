@@ -61,32 +61,21 @@ NSArray *_items;
 
 	for(NSDictionary *item in _items)
 	{
-		NSString *name = [item valueForKeyPath:@"name"];
-		NSString *basePrice = [item valueForKeyPath:@"basePrice"];
-		NSString *image = [item valueForKeyPath:@"image"];
 
-		NSString *text = [item valueForKeyPath:@"customizations.text"];
-		if(text == nil) text = @"";
-
-		NSString *logo = [item valueForKeyPath:@"customizations.logo"];
-
-		NSArray *colors = [item valueForKeyPath:@"customizations.color"];
-		NSArray *sizes = [item valueForKeyPath:@"customizations.sizes"];
-
-//		JJRCatalogItemCustomization *customizations = [JJRCatalogItemCustomization new];
-//
-//
-//		JJRCatalogItem *catalogItem = [[JJRCatalogItem new];
-//		catalogItem.name = name;
-//		catalogItem.basePrice = basePrice;
-//		catalogItem.imageUrl = image;
-//		catalogItem.customizations = customizations;
-		
-		
-//		"text" : "What a hack",
-//				"logo" : "sheesh",
 //				"color" : ["#000000", "#ff0000", "#00ff00", "#0000ff"],
 //				"sizes" : ["Small", "Medium", "Large", "X-Large", "2X-Large"]
+
+		JJRCatalogItemCustomization *customization = [JJRCatalogItemCustomization new];
+		customization.text = [item valueForKeyPath:@"customizations.text"] ?: @"";
+		customization.logo = [item valueForKeyPath:@"customizations.logo"] ?: @"";
+		customization.color = [item valueForKeyPath:@"customizations.color"] ?: @[];
+		customization.sizes = [item valueForKeyPath:@"customizations.sizes"] ?: @[];
+
+		JJRCatalogItem *catalogItem = [JJRCatalogItem new];
+		catalogItem.name = [item valueForKeyPath:@"name"] ?: @"";
+		catalogItem.basePrice = [item valueForKeyPath:@"basePrice"] ?: 0;
+		catalogItem.imageUrl = [item valueForKeyPath:@"image"] ?: @"";
+		catalogItem.customizations = customization;
 
 	}
 

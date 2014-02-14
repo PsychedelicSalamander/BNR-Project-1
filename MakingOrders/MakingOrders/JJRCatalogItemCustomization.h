@@ -10,7 +10,7 @@
 
 @interface JJRCatalogItemCustomization : NSObject
 
-@property (nonatomic, strong) NSString *string;
+@property (nonatomic, strong) NSString *text;
 @property (nonatomic, strong) NSString *logo;
 @property (nonatomic, strong) NSMutableArray *color;
 @property (nonatomic, strong) NSMutableArray *sizes;
