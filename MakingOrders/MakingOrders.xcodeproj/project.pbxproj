@@ -169,6 +169,10 @@
 		699BBEAB18AD8601005D1105 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A989C26918AD874B005689B7 /* JJRCatalogItem.h */,
+				A989C26A18AD874B005689B7 /* JJRCatalogItem.m */,
+				A989C26C18AD87CD005689B7 /* JJRCatalogItemCustomization.h */,
+				A989C26D18AD87CD005689B7 /* JJRCatalogItemCustomization.m */,
 				699BBEB518AD9C2D005D1105 /* JJROrder.h */,
 				699BBEB618AD9C2D005D1105 /* JJROrder.m */,
 				699BBEAF18AD874A005D1105 /* JJRCartItem.h */,
@@ -225,10 +229,6 @@
 				A90776A818AD3EB20062E9BE /* Supporting Files */,
 				A907771B18AD41A50062E9BE /* DataManager.h */,
 				A907771C18AD41A50062E9BE /* DataManager.m */,
-				A989C26918AD874B005689B7 /* JJRCatalogItem.h */,
-				A989C26A18AD874B005689B7 /* JJRCatalogItem.m */,
-				A989C26C18AD87CD005689B7 /* JJRCatalogItemCustomization.h */,
-				A989C26D18AD87CD005689B7 /* JJRCatalogItemCustomization.m */,
 				CEB0B14218AD9254007B8ED0 /* JJRCatalogCell.h */,
 				CEB0B14318AD9254007B8ED0 /* JJRCatalogCell.m */,
 				CEB0B14718ADA8F3007B8ED0 /* ThirdViewController.h */,
