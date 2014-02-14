@@ -26,7 +26,9 @@ NSMutableArray *_cart;
 	_history = @[].mutableCopy;
 	_cart = @[].mutableCopy;
 
+#if DEBUG
 	[[self class] populateCartWithFakeData];
+#endif
 
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
