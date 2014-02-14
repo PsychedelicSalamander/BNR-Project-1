@@ -14,7 +14,6 @@ static NSString * const kJJRCatalogReady = @"kJJRCatalogReady";
 @interface DataManager : NSObject
 
 + (void)loadProducts;
-+ (void)setItems:(id)items;
 + (NSArray *)items;
 
 @end
